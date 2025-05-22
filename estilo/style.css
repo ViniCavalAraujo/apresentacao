@@ -1,0 +1,254 @@
+@charset "UTF-8";
+
+
+@font-face {
+    font-family: 'creato';
+    src: url('/fontes/CreatoDisplay-Light.otf') format('oepntype');
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* paletas de cores 
+#FFFFFF - branco
+#E0E0E0 - cinza claro
+#757575 - cinza escuro
+#212121 - preto
+#B70061 - rosa */
+
+:root {
+    --corfonte: #B70061;
+    --corfundo: #212121;
+    --fonte-padrao: 'creato', 'Arial', 'Helvetica', 'sans-serif';
+  
+}
+
+body {
+    background-color: var(--corfundo);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    padding: 30px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.infos a {
+    text-decoration: none;
+    color: var(--corfonte);
+    padding: 10px;
+    font-weight: bold;
+    font-family: var(--fonte-padrao);
+    transition: color 0.3s ease-out /*começa rapido e desacelera */;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.033);
+}
+
+.infos a:hover {
+    color: white;
+}
+
+.icones a {
+    text-decoration: none;
+    padding: 10px;
+}
+
+.icones img {
+    width: 24px;
+    height: 24px;
+    transition: filter 0.1s ease-in, transform 0.1s ease-in;
+}
+
+.icones img:hover {
+    filter: brightness(0.5);
+    transform: scale(1.09);
+}
+
+main {
+    color: var(--corfonte);
+    padding: 20px;
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+    flex-grow: 1;
+    font-family: var(--fonte-padrao);
+}
+
+
+main h1 {
+    color: var(--corfonte);
+    font-family: var(--fonte-padrao);
+    margin-top: 50px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.225);
+}
+main h2 {
+    cursor: pointer;
+    color: var(--corfonte);
+}
+
+main p {
+    padding: 10px;
+    font-family: var(--fonte-padrao);
+    line-height: 2em;
+}
+
+.main-habilidades {
+    display: flex;
+    gap: 20px;
+    color: white;
+    font-family: var(--fonte-padrao);
+}
+
+.hab-sociais {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 10px;
+    flex: 1;
+    max-width: 540px;
+    max-height: 800px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.277);
+    transition: transform 0.3s ease, box-shadow 0.3s ease-in;
+
+}
+
+.hab-sociais:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.277);
+}
+
+.hab-sociais img {
+    width: 24px;
+    height: 24px;
+}
+
+.hab-sociais h2 {
+    font-weight: bold;
+    margin-top: 10px;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.285);
+}
+
+.hab-sociais h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.285);
+}
+
+.hab-tecnicas {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 10px;
+    flex: 1;
+    max-width: 540px;
+    max-height: 800px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.277);
+    transition: transform 0.3s ease, box-shadow 0.3s ease-in;
+}
+
+.hab-tecnicas:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.277);
+}
+
+.hab-tecnicas img {
+    width: 24px;
+    height: 24px;
+}
+
+.hab-tecnicas h2 {
+    font-weight: bold;
+    margin-top: 10px;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.285);
+}
+
+.hab-tecnicas h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.285);
+}
+
+.social {
+    list-style-type: none;
+    padding-top: 20px;
+    display: inline-block;
+    text-align: left; /* Garante alinhamento do conteúdo */
+}
+
+.social a {
+    text-decoration: none;
+    color: var(--corfonte);
+    display: flex;
+    align-items: center;
+    /* distancia da imagem para as palavras, como
+    se fosse um margin (gap) */
+    gap: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease, color 0.3s ease;
+}
+
+.social a:hover {
+    filter: brightness(0.7);
+    transform: scale(1.05);
+    color: white;
+    text-shadow: 1px 1px 4px #00000033;
+}
+
+.social li {
+    padding: 10px;
+}
+
+
+
+.social img {
+    width: 24px;
+    height: 24px;
+}
+
+
+
+footer {
+    color: var(--corfonte);
+    text-align: center;
+    font-family: var(--fonte-padrao);
+    margin-top: 40px;
+}
+
+@media (max-width:600px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icones {
+        margin-top: 20px;
+    }
+    .main-habilidades {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+/* para ipads */
+@media (min-height:1000px) {
+    .hab-sociais {
+        margin-top: 40px;
+        max-height: 600px;
+    }
+    .hab-tecnicas {
+        margin-top: 40px;
+        max-height: 600px;
+    }
+}
